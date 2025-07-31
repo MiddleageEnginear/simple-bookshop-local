@@ -1,0 +1,19 @@
+{{#if error}}
+    <p style="color: red;">{{error}}</p>
+{{/if}}
+<form action="/edit-book/{{book.id}}" method="POST">
+    <div>
+        <label for="title">Başlık:</label>
+        <input type="text" id="title" name="title" value="{{book.title}}" required>
+    </div>
+    <div>
+        <label for="author">Yazar:</label>
+        <input type="text" id="author" name="author" value="{{book.author}}" required>
+    </div>
+    <div>
+        <label for="year">Yıl:</label>
+        <input type="number" id="year" name="year" value="{{book.year}}">
+    </div>
+    <button type="submit">Kitabı Güncelle</button>
+    <a href="/" class="button cancel">İptal</a>
+</form>
